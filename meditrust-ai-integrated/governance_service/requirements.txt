@@ -1,0 +1,23 @@
+fastapi==0.115.14
+uvicorn[standard]==0.35.0
+pydantic==2.13.4
+pydantic-settings==2.10.1
+httpx==0.28.1
+python-dotenv==1.1.1
+anyio==4.9.0
+
+# Analytics
+posthog==3.14.2
+
+# Testing
+pytest==8.4.1
+pytest-asyncio==0.25.3
+pytest-cov==6.2.1
+
+# Optional: Gemini grounding verifier (only if GEMINI_GUARDRAIL_ENABLED=true)
+# google-generativeai>=0.7.2
+
+# Optional: Advanced PII detection (requires spacy model download)
+# presidio-analyzer>=2.2.354
+# presidio-anonymizer>=2.2.354
+# spacy>=3.7.5

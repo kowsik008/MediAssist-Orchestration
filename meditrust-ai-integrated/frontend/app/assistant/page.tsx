@@ -1,0 +1,6 @@
+import React from "react";
+import { AssistantShell } from "@/components/assistant/AssistantShell";
+
+export default function AssistantPage() {
+  return <AssistantShell />;
+}

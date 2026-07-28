@@ -1,0 +1,38 @@
+{
+  "description": "POST /api/v1/analytics/capture — capture a KPI event from any module",
+  "method": "POST",
+  "url": "http://127.0.0.1:8002/api/v1/analytics/capture",
+  "note": "No raw query text, no patient data — hashed identifiers only",
+  "body": {
+    "schema_version": "1.0",
+    "request_id": "REQ-SAMPLE-003",
+    "event_type": "meditrust_context_optimized",
+    "user_role": "nurse",
+    "session_id": "sess-abc-123",
+    "properties": {
+      "request_id": "REQ-SAMPLE-003",
+      "tokens_before": 1900,
+      "tokens_after": 1200,
+      "tokens_saved": 700,
+      "reduction_pct": 36.8,
+      "method": "headroom"
+    },
+    "token_metrics": {
+      "tokens_before_optimization": 1900,
+      "tokens_after_optimization": 1200,
+      "tokens_saved": 700,
+      "optimization_method": "headroom"
+    },
+    "latency_metrics": {
+      "total_latency_ms": 2100,
+      "guard_latency_ms": 45,
+      "retrieval_latency_ms": 380,
+      "llm_latency_ms": 1600,
+      "cache_latency_ms": 20
+    }
+  },
+  "expected_response": {
+    "stored": true,
+    "backend_used": "sqlite"
+  }
+}

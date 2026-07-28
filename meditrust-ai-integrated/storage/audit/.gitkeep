@@ -1,0 +1,3 @@
+# Storage placeholder — SQLite audit database goes here
+# This file is tracked so git creates the directory.
+# meditrust.db is gitignored.

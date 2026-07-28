@@ -1,0 +1,16 @@
+.env
+.env.local
+.venv-*/
+**/.venv/
+node_modules/
+.next/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+pytest-cache-files-*/
+logs/
+run/pids.json
+storage/chroma/*.bin
+storage/chroma/*.sqlite3
+storage/audit/*.db
+storage/analytics/*.jsonl

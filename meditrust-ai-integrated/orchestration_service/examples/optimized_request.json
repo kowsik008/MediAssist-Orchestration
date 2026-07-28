@@ -1,0 +1,25 @@
+{
+  "query": "What should staff do before discharging a routine post-op patient?",
+  "user_role": "nurse",
+  "request_id": "demo-optimized-001",
+  "source_snippets": [
+    {
+      "source_id": "discharge-01",
+      "title": "Routine Surgical Discharge SOP",
+      "section": "Step 6",
+      "version": "2026-07",
+      "content": "Confirm stability, reconcile medications, print patient instructions, and schedule follow-up before discharge.",
+      "status": "active",
+      "roles_allowed": ["nurse", "doctor"]
+    },
+    {
+      "source_id": "consent-04",
+      "title": "Patient Counseling Checklist",
+      "section": "Closing",
+      "version": "2026-07",
+      "content": "Explain red-flag symptoms and document understanding before release.",
+      "status": "active",
+      "roles_allowed": ["nurse", "doctor"]
+    }
+  ]
+}

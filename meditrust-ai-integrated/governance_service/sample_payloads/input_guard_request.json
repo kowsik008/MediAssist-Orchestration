@@ -1,0 +1,20 @@
+{
+  "description": "POST /api/v1/guard/input — safe knowledge query",
+  "method": "POST",
+  "url": "http://127.0.0.1:8002/api/v1/guard/input",
+  "body": {
+    "schema_version": "1.0",
+    "request_id": "REQ-SAMPLE-001",
+    "query": "What are the CDC hand hygiene guidelines for healthcare workers in ICU settings?",
+    "user_role": "nurse",
+    "session_id": "sess-abc-123",
+    "conversation_history": [],
+    "metadata": {}
+  },
+  "expected_response": {
+    "decision": "allow",
+    "risk_level": "low",
+    "requires_human_review": false,
+    "guardrail_mode": "deterministic"
+  }
+}

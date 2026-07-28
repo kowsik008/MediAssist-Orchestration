@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* === MEDITRUST AI — RESTRAINED EDITORIAL HEALTHCARE TOKENS === */
+
+    /* Surface Hierarchy */
+    --surface-canvas-dark:  #1f1633;
+    --surface-night:        #150f23;
+    --surface-canvas-light: #ffffff;
+    --surface-soft:         #f7f6fa;
+    --surface-muted:        #f1f0f5;
+
+    /* Ink Hierarchy */
+    --ink-deep:             #1f1633;
+    --ink-body:             #494256;
+    --ink-muted:            #716a7d;
+    --ink-on-dark:          #ffffff;
+    --ink-muted-on-dark:    #bbb3c9;
+
+    /* Brand Accents */
+    --accent-lime:          #c2ef4e;
+    --accent-pink:          #fa7faa;
+    --accent-violet:        #6a5fc1;
+    --accent-violet-deep:   #422082;
+    --accent-violet-mid:    #79628c;
+
+    /* Medical Semantic Status Colors */
+    --status-success:       #23865f;
+    --status-warning:       #a66a00;
+    --status-danger:        #b5414c;
+    --status-info:          #4f62a6;
+
+    /* Hairlines */
+    --hairline-violet:      #362d59;
+    --hairline-cloud:       #e5e7eb;
+    --hairline-dark:        #2d2442;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--surface-soft);
+    color: var(--ink-body);
+    font-family: var(--font-rubik), system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* === Typography Utilities === */
+.font-display-hero {
+  font-family: var(--font-display), var(--font-rubik), system-ui, sans-serif;
+  font-size: clamp(3.2rem, 6.5vw, 5.2rem);
+  line-height: 0.94;
+  letter-spacing: -0.045em;
+  font-weight: 600;
+}
+
+.font-display-section {
+  font-family: var(--font-display), var(--font-rubik), system-ui, sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+}
+
+.font-code {
+  font-family: var(--font-code), Monaco, monospace;
+}
+
+/* === Controlled Lime Keyword Highlight === */
+.chip-lime-keyword {
+  display: inline;
+  color: var(--ink-deep);
+  background: var(--accent-lime);
+  padding: 0.02em 0.16em 0.06em;
+  border-radius: 0.08em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  font-weight: inherit;
+}
+
+/* === Uppercase Button Typography === */
+.button-cap {
+  font-family: var(--font-rubik), system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* === Starfield Texture (Hero & Final CTA only) === */
+.starfield-bg {
+  background-color: var(--surface-canvas-dark);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* === Custom Scrollbar === */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #f1f0f5; }
+::-webkit-scrollbar-thumb { background: #cfcbd8; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #6a5fc1; }
+
+/* === Motion & Accessibility Limits === */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

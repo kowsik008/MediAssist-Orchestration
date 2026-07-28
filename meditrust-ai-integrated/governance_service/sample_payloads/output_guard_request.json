@@ -1,0 +1,41 @@
+{
+  "description": "POST /api/v1/guard/output — validate LLM answer with citation and grounding check",
+  "method": "POST",
+  "url": "http://127.0.0.1:8002/api/v1/guard/output",
+  "body": {
+    "schema_version": "1.0",
+    "request_id": "REQ-SAMPLE-002",
+    "answer": "According to CDC Standard Precautions, healthcare workers must perform hand hygiene before and after patient contact using soap and water or alcohol-based hand rubs. This is a critical infection prevention measure.",
+    "cautions": [],
+    "citations": [
+      {
+        "document_id": "CDC-IPC-001",
+        "title": "CDC Standard Precautions for All Patient Care",
+        "section": "Hand Hygiene",
+        "publisher": "Centers for Disease Control and Prevention",
+        "url": "https://www.cdc.gov/infection-control/hcp/guidance/index.html",
+        "source_type": "public",
+        "status": "active",
+        "version_date": "2024-01",
+        "access_roles": [],
+        "licence": "Public Domain",
+        "is_synthetic": false
+      }
+    ],
+    "risk_level": "low",
+    "user_role": "nurse",
+    "retrieved_document_ids": ["CDC-IPC-001"],
+    "retry_count": 0,
+    "metadata": {
+      "retrieved_chunks": [
+        "Hand hygiene is the single most important measure to reduce healthcare-associated infections. Healthcare workers should perform hand hygiene before and after patient contact using soap and water or alcohol-based hand rubs as per CDC Standard Precautions."
+      ]
+    }
+  },
+  "expected_response": {
+    "decision": "pass",
+    "schema_valid": true,
+    "safety_passed": true,
+    "requires_human_review": false
+  }
+}

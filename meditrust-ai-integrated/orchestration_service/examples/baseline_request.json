@@ -1,0 +1,16 @@
+{
+  "query": "Summarize the emergency triage handoff steps for incoming stroke cases.",
+  "user_role": "nurse",
+  "request_id": "demo-baseline-001",
+  "source_snippets": [
+    {
+      "source_id": "stroke-guide-01",
+      "title": "Stroke Triage Guideline",
+      "section": "Section 2",
+      "version": "2026-07",
+      "content": "Activate stroke pathway, document onset time, notify imaging, and hand over to emergency physician immediately.",
+      "status": "active",
+      "roles_allowed": ["nurse", "doctor"]
+    }
+  ]
+}
